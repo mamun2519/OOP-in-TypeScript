@@ -16,3 +16,5 @@ class TemperatureController {
     this.currentTemp = newTemp;
   }
 }
+
+const reactor = new TemperatureController(100, 150);
