@@ -11,6 +11,10 @@ class UserProfile {
   getFullAddress() {
     return `Requested User Name ${this.name} and his email ${this.email}`;
   }
+
+  get email(){
+
+  }
 }
 
 export const user = new UserProfile(
@@ -35,5 +39,5 @@ class StudentProfile {
 }
 
 export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
-studentInfo.email = "zya";
-console.log(studentInfo.id);
+
+console.log(studentInfo.);
