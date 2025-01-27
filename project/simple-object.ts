@@ -40,4 +40,4 @@ class StudentProfile {
 
 export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
 
-console.log(studentInfo.);
+console.log(studentInfo.userPassword);
