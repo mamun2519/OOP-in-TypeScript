@@ -20,22 +20,18 @@ export const user = new UserProfile(
 );
 
 class StudentProfile {
-  id: string;
-  email: string;
-  password: string;
-  constructor(name: string, email: string, password: string) {
-    this.name = name;
+  readonly id: string;
+  public email: string;
+  private password: string;
+  constructor(email: string, password: string) {
     this.email = email;
     this.password = password;
+    this.id = "1234";
   }
 
-  getFullAddress() {
-    return `Requested User Name ${this.name} and his email ${this.email}`;
+  userEmailValidate() {
+    return `Rl ${this.email}`;
   }
 }
 
-export const user = new StudentProfile(
-  "Mohammad Mamun",
-  "mamun@gmail.com",
-  "1234"
-);
+export const user = new StudentProfile("Mohammad Mamun", "mamun@gmail.com");
