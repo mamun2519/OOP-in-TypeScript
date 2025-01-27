@@ -17,4 +17,4 @@ class TemperatureController {
   }
 }
 
-const reactor = new TemperatureController(100, 150);
+export const reactor = new TemperatureController(100, 150);
