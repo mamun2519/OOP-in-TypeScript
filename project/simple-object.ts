@@ -35,4 +35,5 @@ class StudentProfile {
 }
 
 export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
+studentInfo.email = "zya";
 console.log(studentInfo.id);
