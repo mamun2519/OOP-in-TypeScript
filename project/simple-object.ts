@@ -30,7 +30,7 @@ class StudentProfile {
   }
 
   userEmailValidate() {
-    return `Rl ${this.email}`;
+    return `Requested Email ${this.email} Is validate.`;
   }
 }
 
