@@ -12,8 +12,8 @@ class UserProfile {
     return `Requested User Name ${this.name} and his email ${this.email}`;
   }
 
-  get email(){
-
+  get userEmail():string{
+ return this.email
   }
 }
 
