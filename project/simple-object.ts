@@ -14,3 +14,4 @@ class UserProfile {
 }
 
 const user = new UserProfile("Mohammad Mamun", "mamun@gmail.com", "1234");
+console.log(user);
