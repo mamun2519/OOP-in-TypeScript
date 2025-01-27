@@ -9,4 +9,10 @@ class TemperatureController {
   get currentTempF(): number {
     return (this.currentTemp * 9) / 5 + 32;
   }
+  set currentTempC(newTemp: number): number {
+    if (newTemp > this.maxTemp) {
+      throw new Error("Temperature exceeds safety limit");
+    }
+    this.currentTemp = newTemp;
+  }
 }
