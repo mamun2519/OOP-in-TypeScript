@@ -18,4 +18,3 @@ export const user = new UserProfile(
   "mamun@gmail.com",
   "1234"
 );
-console.log(user);
