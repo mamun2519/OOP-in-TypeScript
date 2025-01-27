@@ -15,6 +15,14 @@ class TemperatureController {
     }
     this.currentTemp = newTemp;
   }
+
+  private executeCoolingProtocol() {
+    this.currentTemp -= 10;
+  }
+
+  private logEmergency(): void {
+    console.log("Emergency cooldown activated at", new Date());
+  }
 }
 
 export const reactor = new TemperatureController(100, 150);
