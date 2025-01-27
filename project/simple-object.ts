@@ -34,7 +34,5 @@ class StudentProfile {
   }
 }
 
-export const studentInfo = new StudentProfile(
-  "Mohammad Mamun",
-  "mamun@gmail.com"
-);
+export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
+console.log(studentInfo.id);
