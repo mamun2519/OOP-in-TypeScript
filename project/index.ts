@@ -3,4 +3,5 @@ import { reactor } from "./encapsulation";
 // console.log(user);
 // console.log(user.getFullAddress());
 
-console.log(studentInfo);
+// console.log(studentInfo);
+console.log(reactor);
