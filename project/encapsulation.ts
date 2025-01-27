@@ -18,3 +18,4 @@ class TemperatureController {
 }
 
 export const reactor = new TemperatureController(100, 150);
+reactor.currentTempC = 120;
