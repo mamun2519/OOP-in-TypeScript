@@ -36,6 +36,9 @@ class StudentProfile {
   get userPassword(): string {
     return this.password;
   }
+  set userPassword(newPass: string) {
+    this.password = newPass;
+  }
 }
 
 export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
