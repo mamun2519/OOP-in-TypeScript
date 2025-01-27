@@ -12,3 +12,5 @@ class UserProfile {
     return `Requested User Name ${this.name} and his email ${this.email}`;
   }
 }
+
+const user = new UserProfile("Mohammad Mamun", "mamun@gmail.com", "1234");
