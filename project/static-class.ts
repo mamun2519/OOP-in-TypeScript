@@ -15,3 +15,6 @@ class AppConfig {
 }
 
 export const config = AppConfig.getInstance();
+if (AppConfig.isProduction()) {
+  console.log("Production mode enabled");
+}
