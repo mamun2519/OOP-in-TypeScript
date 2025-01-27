@@ -23,6 +23,11 @@ class TemperatureController {
   private logEmergency(): void {
     console.log("Emergency cooldown activated at", new Date());
   }
+
+  public emergencyCoolDown() {
+    this.executeCoolingProtocol();
+    this.logEmergency();
+  }
 }
 
 export const reactor = new TemperatureController(100, 150);
