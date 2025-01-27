@@ -39,6 +39,9 @@ class StudentProfile {
   set userPassword(newPass: string) {
     this.password = newPass;
   }
+  private deleteUser() {
+    return "This account has been delete";
+  }
 }
 
 export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
