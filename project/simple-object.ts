@@ -43,7 +43,9 @@ class StudentProfile {
     return "This account has been delete";
   }
 
-  static validatePassword;
+  static validatePassword() {
+    return this.de;
+  }
 }
 
 export const studentInfo = new StudentProfile("mamun@gmail.com", "Mamun2345");
