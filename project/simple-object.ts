@@ -11,10 +11,6 @@ class UserProfile {
   getFullAddress() {
     return `Requested User Name ${this.name} and his email ${this.email}`;
   }
-
-  get userEmail():string{
- return this.email
-  }
 }
 
 export const user = new UserProfile(
@@ -35,6 +31,10 @@ class StudentProfile {
 
   userEmailValidate() {
     return `Requested Email ${this.email} Is validate.`;
+  }
+
+  get userPassword(): string {
+    return this.password;
   }
 }
 
