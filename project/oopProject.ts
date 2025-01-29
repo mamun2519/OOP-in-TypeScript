@@ -39,8 +39,16 @@ class StripePayment {
             throw new Error(`Internal Stripe API error: ${error.message}`);
           case "StripeConnectionError":
             throw new Error(`Network error: ${error.message}`);
+          case "StripeAuthenticationError":
+            throw new Error(`Authentication error: ${error.message}`);
+          default:
+            throw new Error(`Unexpected error: ${error.message}`);
         }
       }
+
+      throw new Error("An unexpected error occurred");
     }
   }
+
+  private async createCustomer({ name, email }: {}) {}
 }
