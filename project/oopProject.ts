@@ -50,5 +50,34 @@ class StripePayment {
     }
   }
 
-  private async createCustomer({ name, email }: {}) {}
+  private async createCustomer({
+    name,
+    email,
+  }: {
+    name: string;
+    email: string;
+  }) {
+    return await this.Stripe().customers.create({
+      name: name,
+      email: email,
+    });
+  }
+
+  private async createPaymentIntents({
+    amount,
+    email,
+    customerId,
+  }: {
+    amount: string;
+    email: string;
+    customerId: string;
+  }) {
+    return this.Stripe().paymentIntents.create({
+      amount: parseInt(amount) * 100,
+      currency: "usd",
+      automatic_payment_methods: {
+        enabled: false,
+      },
+    });
+  }
 }
