@@ -137,11 +137,4 @@ class StripePayment {
       name: productName || "One-time donation",
     });
   }
-  private async createPricesByStripe(amount: string, productId: string) {
-    return await this.Stripe().prices.create({
-      unit_amount: parseInt(amount) * 100,
-      currency: "usd",
-      product: productId,
-    });
-  }
 }
