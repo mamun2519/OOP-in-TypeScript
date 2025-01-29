@@ -108,14 +108,4 @@ class StripePayment {
       customer: customerId,
     });
   }
-
-  private async CreateStripeSession(payload: TCreateSession) {
-    const product = await this.createProductByStripe(payload.productName);
-
-    let price;
-    if (product) {
-      //* create a pricing from Stripe
-      price = await this.createPricesByStripe(payload.amount, product.id);
-    }
-  }
 }
