@@ -72,9 +72,6 @@ class StripePayment {
     email: string;
     customerId: string;
   }) {
-    return this.Stripe().paymentIntents.create({
-      amount: parseInt(amount) * 100,
-      currency: "usd",
-    });
+    return this.Stripe().paymentIntents.create({});
   }
 }
