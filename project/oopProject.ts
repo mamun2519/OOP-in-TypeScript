@@ -61,5 +61,17 @@ class StripePayment {
     if (isNaN(amountInCents) || amountInCents <= 0) {
       throw new Error("Invalid amount Price");
     }
+    try {
+      //* create product id from Stripe,
+      const session: any = await this.CreateStripeSession(payload);
+      if (!session.clientSecret) {
+        throw new Error("Client secret not found in session");
+      }
+      return session.clientSecret;
+    } catch (error) {
+      throw new Error(
+        "Unable to create Stripe session. Please try again later."
+      );
+    }
   }
 }
