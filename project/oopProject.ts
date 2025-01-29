@@ -131,4 +131,36 @@ class StripePayment {
       // return { success: false }
     }
   }
+
+  private async createProductByStripe(productName: string) {
+    return this.Stripe().products.create({
+      name: productName || "One-time donation",
+    });
+  }
+  private async createPricesByStripe(amount: string, productId: string) {
+    return await this.Stripe().prices.create({
+      unit_amount: parseInt(amount) * 100,
+      currency: "usd",
+      product: productId,
+    });
+  }
+
+  private async createStripeCheckoutSession(priceId: string) {
+    return await this.Stripe().checkout.sessions.create({
+      ui_mode: "embedded",
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
+
+      mode: "payment",
+      return_url:
+        "http://localhost:5173/return?session_id={CHECKOUT_SESSION_ID}",
+    });
+  }
 }
+
+const payment = new StripePayment();
+payment.paymentInit();
