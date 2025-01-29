@@ -45,8 +45,6 @@ class StripePayment {
             throw new Error(`Unexpected error: ${error.message}`);
         }
       }
-
-      throw new Error("An unexpected error occurred");
     }
   }
 }
