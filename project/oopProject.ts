@@ -19,12 +19,6 @@ class StripePayment {
         name,
         email,
       });
-
-      const paymentIntent = await this.createPaymentIntents({
-        amount,
-        email,
-        customerId: customer.id,
-      });
     } catch (error) {}
   }
 }
