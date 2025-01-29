@@ -25,15 +25,7 @@ class StripePayment {
         email,
         customerId: customer.id,
       });
-      return {
-        clientSecret: paymentIntent.client_secret,
-      };
-    } catch (error) {
-      if (error instanceof Stripe.errors.StripeError) {
-        switch (error.type) {
-        }
-      }
-
+     
       throw new Error("An unexpected error occurred");
     }
   }
