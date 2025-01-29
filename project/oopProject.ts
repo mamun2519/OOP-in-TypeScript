@@ -1,4 +1,6 @@
 class StripePayment {
   private stripeSecretKey = demoAppConfig?.stripe?.serverSecretKey;
-  stripe = new Stripe();
+  private Stripe() {
+    return new Stripe(this.stripeSecretKey);
+  }
 }
