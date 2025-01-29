@@ -20,13 +20,7 @@ class StripePayment {
         email,
       });
 
-      const paymentIntent = await this.createPaymentIntents({
-        amount,
-        email,
-        customerId: customer.id,
-      });
      
-      throw new Error("An unexpected error occurred");
     }
   }
 }
