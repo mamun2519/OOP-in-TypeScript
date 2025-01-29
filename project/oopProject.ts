@@ -67,9 +67,5 @@ class StripePayment {
     amount,
     email,
     customerId,
-  }: {
-    amount: string;
-    email: string;
-    customerId: string;
-  }) {}
+  }: 
 }
