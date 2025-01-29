@@ -75,9 +75,6 @@ class StripePayment {
     return this.Stripe().paymentIntents.create({
       amount: parseInt(amount) * 100,
       currency: "usd",
-      automatic_payment_methods: {
-        enabled: false,
-      },
     });
   }
 }
