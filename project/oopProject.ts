@@ -11,5 +11,6 @@ class StripePayment {
     if (isNaN(amountInCents) || amountInCents <= 0) {
       throw new Error("Invalid amount value");
     }
+    const customer = this.Stripe().customers.create;
   }
 }
