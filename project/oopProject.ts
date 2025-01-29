@@ -50,11 +50,5 @@ class StripePayment {
     }
   }
 
-  private async createCustomer({
-    name,
-    email,
-  }: {
-    name: string;
-    email: string;
-  }) {}
+  private async createCustomer({ name, email }: {}) {}
 }
