@@ -131,10 +131,4 @@ class StripePayment {
       // return { success: false }
     }
   }
-
-  private async createProductByStripe(productName: string) {
-    return this.Stripe().products.create({
-      name: productName || "One-time donation",
-    });
-  }
 }
