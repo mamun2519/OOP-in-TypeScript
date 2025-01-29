@@ -33,10 +33,6 @@ class StripePayment {
         switch (error.type) {
           case "StripeCardError":
             throw new Error(`A payment error occurred: ${error.message}`);
-          case "StripeInvalidRequestError":
-            throw new Error(`Invalid request: ${error.message}`);
-          case "StripeAPIError":
-            throw new Error(`Internal Stripe API error: ${error.message}`);
         }
       }
     }
