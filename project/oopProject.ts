@@ -87,4 +87,25 @@ class StripePayment {
       email: email,
     });
   }
+
+  private async createPaymentIntents({
+    amount,
+    email,
+    customerId,
+  }: {
+    amount: string;
+    email: string;
+    customerId: string;
+  }) {
+    return this.Stripe().paymentIntents.create({
+      amount: parseInt(amount) * 100,
+      currency: "usd",
+      automatic_payment_methods: {
+        enabled: false,
+      },
+      payment_method_types: ["card"],
+      receipt_email: email,
+      customer: customerId,
+    });
+  }
 }
