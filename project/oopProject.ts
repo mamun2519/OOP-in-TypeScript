@@ -108,4 +108,27 @@ class StripePayment {
       customer: customerId,
     });
   }
+
+  private async CreateStripeSession(payload: TCreateSession) {
+    const product = await this.createProductByStripe(payload.productName);
+
+    let price;
+    if (product) {
+      //* create a pricing from Stripe
+      price = await this.createPricesByStripe(payload.amount, product.id);
+    }
+
+    if (price?.id) {
+      //* create a checkout session from Stripe
+      const session = await this.createStripeCheckoutSession(price?.id);
+
+      if (!session.client_secret) {
+        throw new Error("Client secret not found in session");
+      }
+      return { clientSecret: session.client_secret };
+    } else {
+      throw new Error("Failed to create price");
+      // return { success: false }
+    }
+  }
 }
