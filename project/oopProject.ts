@@ -15,10 +15,6 @@ class StripePayment {
     }
 
     try {
-      const customer = await this.createCustomer({
-        name,
-        email,
-      });
     } catch (error) {}
   }
 }
