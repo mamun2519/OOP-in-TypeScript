@@ -161,6 +161,3 @@ class StripePayment {
     });
   }
 }
-
-const payment = new StripePayment();
-payment.paymentInit();
