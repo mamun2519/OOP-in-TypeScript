@@ -25,9 +25,6 @@ class StripePayment {
         email,
         customerId: customer.id,
       });
-      return {
-        clientSecret: paymentIntent.client_secret,
-      };
     } catch (error) {}
   }
 }
