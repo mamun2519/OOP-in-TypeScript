@@ -78,9 +78,6 @@ class StripePayment {
       automatic_payment_methods: {
         enabled: false,
       },
-      payment_method_types: ["card"],
-      receipt_email: email,
-      customer: customerId,
     });
   }
 }
