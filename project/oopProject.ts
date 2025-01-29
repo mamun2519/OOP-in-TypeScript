@@ -62,10 +62,4 @@ class StripePayment {
       email: email,
     });
   }
-
-  private async createPaymentIntents({
-    amount,
-    email,
-    customerId,
-  }: 
 }
