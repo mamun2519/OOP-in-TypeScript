@@ -144,20 +144,4 @@ class StripePayment {
       product: productId,
     });
   }
-
-  private async createStripeCheckoutSession(priceId: string) {
-    return await this.Stripe().checkout.sessions.create({
-      ui_mode: "embedded",
-      line_items: [
-        {
-          price: priceId,
-          quantity: 1,
-        },
-      ],
-
-      mode: "payment",
-      return_url:
-        "http://localhost:5173/return?session_id={CHECKOUT_SESSION_ID}",
-    });
-  }
 }
