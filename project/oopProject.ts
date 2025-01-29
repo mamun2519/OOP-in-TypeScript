@@ -49,17 +49,4 @@ class StripePayment {
       throw new Error("An unexpected error occurred");
     }
   }
-
-  public async stripeHostedCreateSession(payload: TCreateSession) {
-    const { amount } = payload;
-    if (!amount) {
-      throw new Error("amount is required ");
-    }
-
-    const amountInCents = parseInt(amount, 10) * 100;
-
-    if (isNaN(amountInCents) || amountInCents <= 0) {
-      throw new Error("Invalid amount Price");
-    }
-  }
 }
