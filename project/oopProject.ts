@@ -1,11 +1,21 @@
-class StripePayment {
-  private stripeSecretKey = demoAppConfig?.stripe?.serverSecretKey;
-
-  private Stripe() {
-    return new Stripe(this.stripeSecretKey);
+export class StripePayment {
+  private _stripeSecretKey = demoAppConfig?.stripe?.serverSecretKey;
+  private _name?: string;
+  private _email?: string;
+  private _amount?: string;
+  constructor(name?: string, email?: string, amount?: string) {
+    this._email = email;
+    this._amount = amount;
+    this._name = name;
   }
-  public async paymentInit({ customerInfo, amount }: TPaymentInit) {
-    const { name, email } = customerInfo;
+  private Stripe() {
+    return new Stripe(this._stripeSecretKey);
+  }
+  public async paymentInit() {
+    // const { name, email } = customerInfo
+    const name = this._name;
+    const email = this._email;
+    const amount = this._amount;
     if (!email || !amount) {
       throw new Error("email or amount is required");
     }
@@ -161,6 +171,3 @@ class StripePayment {
     });
   }
 }
-
-const payment = new StripePayment();
-payment.paymentInit();
