@@ -10,9 +10,6 @@ class StripePayment {
       throw new Error("email or amount is required");
     }
     const amountInCents = parseInt(amount, 10) * 100;
-    if (isNaN(amountInCents) || amountInCents <= 0) {
-      throw new Error("Invalid amount value");
-    }
 
     try {
     } catch (error) {}
