@@ -3,7 +3,7 @@ class StripePayment {
   private Stripe() {
     return new Stripe(this.stripeSecretKey);
   }
-  public paymentByStripe({ customerInfo, amount }: TPaymentInit) {
+  public async paymentByStripe({ customerInfo, amount }: TPaymentInit) {
     if (!customerInfo.email || !amount) {
       throw new Error("email or amount is required");
     }
@@ -11,6 +11,9 @@ class StripePayment {
     if (isNaN(amountInCents) || amountInCents <= 0) {
       throw new Error("Invalid amount value");
     }
-    const customer = this.Stripe().customers.create;
+    const customer = await this.Stripe().customers.create({
+      name: customerInfo.name,
+      email: customerInfo.email,
+    });
   }
 }
