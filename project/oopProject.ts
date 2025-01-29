@@ -11,16 +11,6 @@ class StripePayment {
     }
     const amountInCents = parseInt(amount, 10) * 100;
     if (isNaN(amountInCents) || amountInCents <= 0) {
-      throw new Error("Invalid amount value");
-    }
-
-    try {
-      const customer = await this.createCustomer({
-        name,
-        email,
-      });
-
-     
     }
   }
 }
