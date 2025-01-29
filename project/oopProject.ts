@@ -81,10 +81,5 @@ class StripePayment {
   }: {
     name: string;
     email: string;
-  }) {
-    return await this.Stripe().customers.create({
-      name: name,
-      email: email,
-    });
-  }
+  }) {}
 }
