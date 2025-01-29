@@ -49,6 +49,4 @@ class StripePayment {
       throw new Error("An unexpected error occurred");
     }
   }
-
-  private async createCustomer({ name, email }: {}) {}
 }
