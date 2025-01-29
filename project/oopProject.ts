@@ -71,7 +71,5 @@ class StripePayment {
     amount: string;
     email: string;
     customerId: string;
-  }) {
-    return this.Stripe().paymentIntents.create({});
-  }
+  }) {}
 }
