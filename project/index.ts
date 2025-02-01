@@ -19,7 +19,16 @@ product.addStock(3);
 product.removeStock(10);
 console.log(product);
 
-const books = new Book("2", "DSA", 2000, 100);
+const books = new Book(
+  "2",
+  "DSA",
+  "Mohammad Mamun",
+  2000,
+  100,
+  "assss",
+  100,
+  "Faction"
+);
 const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
 console.log(ebooks.getDescription());
 console.log(books);
