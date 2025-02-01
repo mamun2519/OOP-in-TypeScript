@@ -59,3 +59,6 @@ console.log(audioBook.getDescription());
 
 const inventoryManager = new InventoryManage();
 console.log(inventoryManager);
+inventoryManager.addProduct(
+  new Book("2", "DSA", "Mohammad Mamun", 2000, 100, "assss", 100, "Faction")
+);
