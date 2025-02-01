@@ -29,11 +29,13 @@ const books = new Book(
   100,
   "Faction"
 );
+console.log(books.getDescription());
+
 const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
 console.log(ebooks.getDescription());
-console.log(books);
-console.log(ebooks);
+// console.log(books);
+// console.log(ebooks);
 const magazine = new Magazine("123", "Daily Start", 150, 50);
-console.log(magazine);
+// console.log(magazine);
 const audioBook = new AudionBook("3", "Been ten", 500, 120);
-console.log(magazine);
+// console.log(magazine);
