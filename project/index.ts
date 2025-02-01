@@ -4,6 +4,7 @@ import { config } from "./static-class";
 import { Product } from "./inhertance/product";
 import { Book } from "./inhertance/book";
 import { Ebook } from "./inhertance/Ebook";
+import { Magazine } from "./inhertance/Magazine";
 
 // console.log(user);
 // console.log(user.getFullAddress());
@@ -22,3 +23,5 @@ const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
 console.log(ebooks.description());
 console.log(books);
 console.log(ebooks);
+const magazine = new Magazine("4", "Daily Start", 150, 50);
+console.log(magazine);
