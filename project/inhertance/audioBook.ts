@@ -12,4 +12,7 @@ export class AudionBook extends Product {
   ) {
     super(id, title, _price, _stock);
   }
+  override getDescription(): string {
+    return `${this.title} | Issue: ${this.issueNumber} | Publisher: ${this.publisher} | Release Date: ${this.releaseDate} | Price: $${this.price} | Stock: ${this.stock}\n`;
+  }
 }
