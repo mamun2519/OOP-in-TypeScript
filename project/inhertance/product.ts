@@ -37,4 +37,7 @@ class Product {
       this._discount = discount;
     }
   }
+  description() {
+    return `The Product Name is ${this.title} and price is ${this._price} and product stock available is ${this._stock}`;
+  }
 }
