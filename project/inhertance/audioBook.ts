@@ -9,5 +9,7 @@ export class AudionBook extends Product {
     public issueNumber: number,
     public publisher: string,
     public releaseDate: Date
-  ) {}
+  ) {
+    super(id, title, _price, _stock);
+  }
 }
