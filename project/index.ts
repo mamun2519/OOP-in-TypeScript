@@ -6,6 +6,7 @@ import { Book } from "./inhertance/book";
 import { Ebook } from "./inhertance/Ebook";
 import { Magazine } from "./inhertance/Magazine";
 import { AudionBook } from "./inhertance/audioBook";
+import { InventoryManage } from "./inhertance/InventoryManager";
 
 // console.log(user);
 // console.log(user.getFullAddress());
@@ -54,4 +55,7 @@ const magazine = new Magazine(
 magazine.applyDiscount(0.4);
 console.log(magazine.getDescription());
 const audioBook = new AudionBook("3", "Been ten", 500, 120);
-// console.log(magazine);
+console.log(audioBook.getDescription());
+
+const inventoryManager = new InventoryManage();
+console.log(inventoryManager);
