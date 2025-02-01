@@ -17,6 +17,9 @@ export class Product {
   set price(newPrice: number) {
     this._price = newPrice;
   }
+  get stock(): number {
+    return this._stock;
+  }
 
   addStock(quantity: number) {
     if (quantity > 0) {
@@ -37,7 +40,7 @@ export class Product {
       this._discount = discount;
     }
   }
-  description() {
+  getDescription() {
     return `The Product Name is ${this.title} and price is ${this._price} and product stock available is ${this._stock}`;
   }
 }

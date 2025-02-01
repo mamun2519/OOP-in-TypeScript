@@ -21,7 +21,7 @@ console.log(product);
 
 const books = new Book("2", "DSA", 2000, 100);
 const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
-console.log(ebooks.description());
+console.log(ebooks.getDescription());
 console.log(books);
 console.log(ebooks);
 const magazine = new Magazine("123", "Daily Start", 150, 50);
