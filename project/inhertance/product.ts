@@ -10,4 +10,11 @@ class Product {
     this._price = _price;
     this._stock = _stock;
   }
+
+  get price() {
+    return this._price;
+  }
+  set price(newPrice: number) {
+    this._price = newPrice;
+  }
 }
