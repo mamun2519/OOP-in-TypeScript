@@ -15,10 +15,10 @@ import { InventoryManage } from "./inhertance/InventoryManager";
 // console.log(reactor);
 // console.log(config);
 
-const product = new Product("1", "Mango", 100, 20);
-product.addStock(3);
-product.removeStock(10);
-console.log(product);
+// const product = new Product("1", "Mango", 100, 20);
+// product.addStock(3);
+// product.removeStock(10);
+// console.log(product);
 
 const books = new Book(
   "2",
@@ -31,7 +31,7 @@ const books = new Book(
   "Faction"
 );
 // console.log(books.getDescription());
-
+console.log(books instanceof Product);
 const ebooks = new Ebook(
   "id3",
   "Ebook title 1",

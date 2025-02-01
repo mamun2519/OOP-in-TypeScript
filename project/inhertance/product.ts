@@ -1,4 +1,4 @@
-export class Product {
+export abstract class Product {
   protected _discount: number = 0;
   public readonly id: string;
   public readonly title: string;
