@@ -29,7 +29,7 @@ const books = new Book(
   100,
   "Faction"
 );
-console.log(books.getDescription());
+// console.log(books.getDescription());
 
 const ebooks = new Ebook(
   "id3",
@@ -38,7 +38,7 @@ const ebooks = new Ebook(
   500,
   "https://www.google.com"
 );
-console.log(ebooks.getDescription());
+// console.log(ebooks.getDescription());
 // console.log(books);
 // console.log(ebooks);
 const magazine = new Magazine(
@@ -50,7 +50,8 @@ const magazine = new Magazine(
   "Test Publisher",
   new Date()
 );
-console.log(magazine.applyDiscount(4));
-console.log(magazine);
+// console.log();
+magazine.applyDiscount(0.4);
+console.log(magazine.getDescription());
 const audioBook = new AudionBook("3", "Been ten", 500, 120);
 // console.log(magazine);
