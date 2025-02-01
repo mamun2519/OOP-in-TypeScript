@@ -10,5 +10,5 @@ import { Product } from "./inhertance/product";
 // console.log(reactor);
 // console.log(config);
 
-const product = new Product();
+const product = new Product("1", "Mango", 100, 20);
 console.log(Product);
