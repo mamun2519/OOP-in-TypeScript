@@ -1,13 +1,13 @@
 import { Product } from "./product";
 
 export class Ebook extends Product {
-  private totalDownload: number;
+  private totalDownloads: number;
   constructor(
     public id: string,
     title: string,
     public author: string,
     protected _price: number,
-    private _totalDownload: number
+    private _downloadLink: number
   ) {
     super(id, title, _price, 1);
   }
