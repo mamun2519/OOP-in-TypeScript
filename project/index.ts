@@ -12,4 +12,5 @@ import { Product } from "./inhertance/product";
 
 const product = new Product("1", "Mango", 100, 20);
 console.log(product.description());
+console.log(product.addStock(3));
 console.log(product);
