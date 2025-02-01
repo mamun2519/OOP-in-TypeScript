@@ -23,5 +23,5 @@ const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
 console.log(ebooks.description());
 console.log(books);
 console.log(ebooks);
-const magazine = new Magazine("4", "Daily Start", 150, 50);
+const magazine = new Magazine("123", "Daily Start", 150, 50);
 console.log(magazine);
