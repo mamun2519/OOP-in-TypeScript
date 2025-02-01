@@ -41,7 +41,16 @@ const ebooks = new Ebook(
 console.log(ebooks.getDescription());
 // console.log(books);
 // console.log(ebooks);
-const magazine = new Magazine("123", "Daily Start", 150, 50);
-// console.log(magazine);
+const magazine = new Magazine(
+  "123",
+  "Daily Start",
+  150,
+  50,
+  1,
+  "Test Publisher",
+  new Date()
+);
+console.log(magazine.applyDiscount(4));
+console.log(magazine);
 const audioBook = new AudionBook("3", "Been ten", 500, 120);
 // console.log(magazine);
