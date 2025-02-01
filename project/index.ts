@@ -58,7 +58,21 @@ const audioBook = new AudionBook("3", "Been ten", 500, 120);
 console.log(audioBook.getDescription());
 
 const inventoryManager = new InventoryManage();
-console.log(inventoryManager);
+
 inventoryManager.addProduct(
   new Book("2", "DSA", "Mohammad Mamun", 2000, 100, "assss", 100, "Faction")
 );
+
+inventoryManager.addProduct(
+  new Magazine(
+    "id2",
+    "First Magazine",
+    500,
+    10,
+    1,
+    "Test Publisher",
+    new Date()
+  )
+);
+
+console.log(inventoryManager);
