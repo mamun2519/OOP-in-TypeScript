@@ -3,7 +3,7 @@ class Product {
   public readonly id: string;
   public readonly title: string;
   protected _price: number;
-  private _stock: number;
+  protected _stock: number;
   constructor(id: string, title: string, _price: number, _stock: number) {
     this.id = id;
     this.title = title;
