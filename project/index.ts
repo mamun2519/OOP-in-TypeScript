@@ -19,5 +19,6 @@ console.log(product);
 
 const books = new Book("2", "DSA", 2000, 100);
 const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
+console.log(ebooks.description());
 console.log(books);
 console.log(ebooks);
