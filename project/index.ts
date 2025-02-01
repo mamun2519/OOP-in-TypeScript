@@ -5,6 +5,7 @@ import { Product } from "./inhertance/product";
 import { Book } from "./inhertance/book";
 import { Ebook } from "./inhertance/Ebook";
 import { Magazine } from "./inhertance/Magazine";
+import { AudionBook } from "./inhertance/audioBook";
 
 // console.log(user);
 // console.log(user.getFullAddress());
@@ -24,4 +25,6 @@ console.log(ebooks.description());
 console.log(books);
 console.log(ebooks);
 const magazine = new Magazine("123", "Daily Start", 150, 50);
+console.log(magazine);
+const audioBook = new AudionBook("3", "Been ten", 500, 120);
 console.log(magazine);
