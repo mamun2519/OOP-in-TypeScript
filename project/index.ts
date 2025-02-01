@@ -3,6 +3,7 @@ import { reactor } from "./encapsulation";
 import { config } from "./static-class";
 import { Product } from "./inhertance/product";
 import { Book } from "./inhertance/book";
+import { Ebook } from "./inhertance/Ebook";
 
 // console.log(user);
 // console.log(user.getFullAddress());
@@ -17,4 +18,6 @@ product.removeStock(10);
 console.log(product);
 
 const books = new Book("2", "DSA", 2000, 100);
+const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
 console.log(books);
+console.log(ebooks);
