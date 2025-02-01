@@ -31,7 +31,13 @@ const books = new Book(
 );
 console.log(books.getDescription());
 
-const ebooks = new Ebook("4", "Hero of Programming", 150, 50);
+const ebooks = new Ebook(
+  "id3",
+  "Ebook title 1",
+  "Test Author",
+  500,
+  "https://www.google.com"
+);
 console.log(ebooks.getDescription());
 // console.log(books);
 // console.log(ebooks);
