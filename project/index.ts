@@ -11,4 +11,4 @@ import { Product } from "./inhertance/product";
 // console.log(config);
 
 const product = new Product("1", "Mango", 100, 20);
-console.log(Product);
+console.log(product);
