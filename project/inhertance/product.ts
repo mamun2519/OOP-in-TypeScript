@@ -1,4 +1,4 @@
-class Product {
+export class Product {
   protected _discount: number = 0;
   public readonly id: string;
   public readonly title: string;
