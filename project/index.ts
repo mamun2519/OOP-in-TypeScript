@@ -7,6 +7,7 @@ import { Ebook } from "./inhertance/Ebook";
 import { Magazine } from "./inhertance/Magazine";
 import { AudionBook } from "./inhertance/audioBook";
 import { InventoryManage } from "./inhertance/InventoryManager";
+import { AudioPlayer } from "./abstraction/MediaPlayer";
 
 // console.log(user);
 // console.log(user.getFullAddress());
@@ -76,3 +77,4 @@ inventoryManager.addProduct(
 );
 
 console.log(inventoryManager);
+// const audioPlayer = new AudioPlayer("video.mp4', 'mp4");
