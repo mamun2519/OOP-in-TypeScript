@@ -77,4 +77,5 @@ inventoryManager.addProduct(
 );
 
 console.log(inventoryManager);
-// const audioPlayer = new AudioPlayer("video.mp4', 'mp4");
+const audioPlayer = new AudioPlayer("video.mp4", "mp4");
+console.log(audioPlayer.pause());
